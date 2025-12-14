@@ -18,31 +18,71 @@ Do not assume the destination. Ask the following references:
 ---
 
 ## Phase 2: Project Initialization
-1.  **Clone Template:** Copy the `MasterTemplate` folder to a new directory named after the destination (e.g., `../KyotoJourney` or `../MoroccoImperial`).
-2.  **Install:** Run `npm install` in the new directory.
+1.  **Verify Workspace:** Confirm you are currently in the target directory (e.g., `../KyotoJourney`). Do **NOT** clone the `MasterTemplate` again. The project is already initialized.
+2.  **Install:** Run `npm install`.
+3.  **Overwrite Permission:** You are authorized to overwrite `src/data/itineraryData.js` with new content.
 
 ---
 
 ## Phase 3: Content Generation
-**Action:** Generate the `src/data/itineraryData.js` file.
+**Action:** Generate (and overwrite) the `src/data/itineraryData.js` file.
 **Context:** Use the *Interview Results* as the source material.
-**Tone:** "Honored Guest", "Exclusive", "Timeless", "Sanctuary".
-**Structure:**
-- **Hero Section:** Title & Subtitle based on the Vibe.
-- **Intro:** Deep, evocative storytelling.
-- **Itinerary:** Day-by-day breakdown with *real* locations and *specific* activity names.
-- **Images:** Suggest logical filenames (e.g., `/images/day1_temple.jpg`).
-- **Footer:** "Why this works" rationale & "Narendra Experience" branding.
 
-**Output Format:**
+### 3.1 Content Guidelines
+*   **Tone:** "Honored Guest", "Exclusive", "Timeless", "Sanctuary".
+    *   *Forbidden Words:* "Fun", "Cheap", "Budget", "Tourist", "Busy".
+    *   *Preferred Words:* "Private", "Curated", "Sanctuary", "Timeless", "Bespoke".
+*   **Specificity:**
+    *   **Real Locations:** Use exact names of parks, districts, or landmarks.
+    *   **Image Keywords:** You MUST provide search terms for "moody/luxury" photos (e.g., "Arashiyama bamboo grove dark moody").
+    *   **Booking Links:** Provide real or plausible URLs to official sites/Viator.
+
+### 3.2 output Schema (Strict)
+You must output specific Javascript code that matches `src/App.jsx`.
+
 ```javascript
 export const itineraryData = {
-  tripDetails: { ... },
-  introContent: { ... },
-  itineraryItems: [ ... ],
-  footerContent: { ... }
+  tripDetails: {
+    title: "[City/Country]: [Duration] Adventure",
+    subtitle: "[Evocative Subtitle]",
+    heroImage: "/images/hero.png" // Suggest a filename
+  },
+  introContent: {
+    headline: "[Short, Punchy Headline]",
+    body: "[2-3 sentences selling the vibe.]"
+  },
+  itineraryItems: [
+    {
+      title: "[Day Title]",
+      location: "[District/Area]",
+      description: "[Detailed paragraph. Mention specific landmarks.]",
+      image: "/images/day1_[keyword].jpg", // Suggest a filename based on content
+      link: "[URL to a real tour/activity]",
+      linkText: "Book [Activity Name]"
+    },
+    // ... Repeat for all days
+  ],
+  footerContent: {
+    title: "Why this itinerary works",
+    items: [
+      "[Reason 1: Logistics/Geography]",
+      "[Reason 2: Variety of activities]",
+      "[Reason 3: Pacing/Rest]"
+    ],
+    tip: {
+      label: "Elite Tip",
+      text: "[Practical high-end advice]"
+    }
+  }
 };
 ```
+
+### 3.3 Quality Checklist
+Before saving, verify:
+1.  [ ] Did I use specific, real names for every location?
+2.  [ ] Did I avoid all forbidden words?
+3.  [ ] Is the JSON structure valid and matching the schema above?
+
 
 ---
 

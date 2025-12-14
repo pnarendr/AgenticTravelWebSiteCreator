@@ -9,6 +9,7 @@ export default {
             fontFamily: {
                 serif: ['"Bodoni Moda"', 'serif'],
                 sans: ['"Inter"', 'sans-serif'],
+                cursive: ['"Pinyon Script"', 'cursive'],
             },
             colors: {
                 gold: {

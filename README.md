@@ -22,5 +22,7 @@ Code is no longer written by hand. This repository provides:
 **READ `MASTER_WORKFLOW_PROMPT.md` FIRST.**
 This file contains your Standard Operating Procedure (SOP). Do not deviate.
 
+**CRITICAL:** Do NOT clone this repository again. You are typically running *inside* the cloned workspace. Assume the environment is ready and dependencies just need `npm install`.
+
 ---
 *Powered by React, Vite, Tailwind, and Agentic AI.*

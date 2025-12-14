@@ -22,7 +22,7 @@ export default function Footer({ content }) {
             <div className="max-w-4xl mx-auto text-center space-y-12">
                 <div className="space-y-4">
                     <h2 className="text-3xl md:text-4xl font-serif text-white">The Narendra Experience</h2>
-                    <p className="tracking-widest uppercase text-sm opacity-60">Ultimate Customization for One</p>
+                    <p className="font-cursive text-2xl text-gold-500 opacity-80">Voyage Sans Argent</p>
                 </div>
 
                 <div className="flex flex-col md:flex-row justify-center items-center gap-8 font-sans text-sm tracking-widest text-white/60 uppercase">

@@ -1,3 +1,4 @@
+// TEMPLATE DATA: This file is meant to be overwritten by the Agent.
 export const itineraryData = {
     tripDetails: {
         title: "Costa Rica: The Emerald Sanctuary",
