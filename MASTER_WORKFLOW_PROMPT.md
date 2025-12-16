@@ -36,6 +36,7 @@ Do not assume the destination. Ask the following references:
     *   **Real Locations:** Use exact names of parks, districts, or landmarks.
     *   **Image Keywords:** You MUST provide search terms for "moody/luxury" photos (e.g., "Arashiyama bamboo grove dark moody").
     *   **Booking Links:** Provide real or plausible URLs to official sites/Viator.
+    *   **SEO:** Title must read like a clickable search result (e.g., "7-Day adventurous..."). Description must be under 160 chars.
 
 ### 3.2 output Schema (Strict)
 You must output specific Javascript code that matches `src/App.jsx`.
@@ -46,6 +47,11 @@ export const itineraryData = {
     title: "[City/Country]: [Duration] Adventure",
     subtitle: "[Evocative Subtitle]",
     heroImage: "/images/hero.png" // Suggest a filename
+  },
+  seoMetadata: {
+    title: "[7-Day Adjective Location Itinerary (Key Feature)]",
+    description: "[140-160 char summary. Start with action verb.]",
+    ogImage: "/images/hero.png" // Usually matches hero
   },
   introContent: {
     headline: "[Short, Punchy Headline]",

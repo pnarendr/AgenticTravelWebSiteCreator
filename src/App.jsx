@@ -4,6 +4,7 @@ import HeroSection from './components/HeroSection';
 import IntroSection from './components/IntroSection';
 import ItinerarySection from './components/ItinerarySection';
 import Footer from './components/Footer';
+import SEO from './components/SEO';
 import { itineraryData } from './data/itineraryData';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
 
   return (
     <div className="min-h-screen">
+      <SEO data={itineraryData.seoMetadata} />
       <HeroSection
         title={itineraryData.tripDetails.title}
         subtitle={itineraryData.tripDetails.subtitle}

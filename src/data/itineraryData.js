@@ -5,6 +5,11 @@ export const itineraryData = {
         subtitle: "Mist, Fire, and the Golden Pacific",
         heroImage: "/images/hero.png" // Added for template structure
     },
+    seoMetadata: {
+        title: "7-Day Luxury Costa Rica Itinerary (Volcanoes & Beach Sanctuary)",
+        description: "Experience the ultimate luxury in Costa Rica. A 7-day curated journey from volcanic heights to exclusive beach retreats. No detail overlooked.",
+        ogImage: "/images/hero.png"
+    },
     introContent: {
         headline: "Pura Vida, Elevated",
         body: "Enter a world where primal nature meets uncompromising comfort. From the historic grandeur of a coffee estate to the wild luxury of the Nicoya Peninsula and the modern design of Reserva Conchal, this is your private gateway to the wildest paradise on earth."
