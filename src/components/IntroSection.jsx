@@ -36,7 +36,6 @@ export default function IntroSection({ headline, body }) {
             </div>
 
             <div ref={textRef} className="relative z-10 max-w-3xl mx-auto">
-                <div className="w-px h-24 bg-gold-400 mx-auto mb-12" />
                 <h2 className="font-serif text-5xl md:text-6xl text-white mb-8 leading-tight drop-shadow-lg">
                     {headline}
                 </h2>
