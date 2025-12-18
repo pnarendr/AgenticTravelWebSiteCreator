@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function IntroSection({ headline, body }) {
+export default function IntroSection({ headline, body, introImage }) {
     const sectionRef = useRef(null);
     const textRef = useRef(null);
 
@@ -28,8 +28,8 @@ export default function IntroSection({ headline, body }) {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/images/day5_ocean.png"
-                    alt="Ocean View"
+                    src={introImage || "/images/hero.png"}
+                    alt={headline}
                     className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40" />

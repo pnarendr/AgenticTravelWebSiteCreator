@@ -43,6 +43,7 @@ function App() {
       <IntroSection
         headline={itineraryData.introContent.headline}
         body={itineraryData.introContent.body}
+        introImage={itineraryData.introContent.introImage}
       />
       <ItinerarySection items={itineraryData.itineraryItems} />
       <Footer content={itineraryData.footerContent} />

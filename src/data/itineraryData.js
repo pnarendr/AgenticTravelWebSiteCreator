@@ -12,7 +12,8 @@ export const itineraryData = {
     },
     introContent: {
         headline: "Pura Vida, Elevated",
-        body: "Enter a world where primal nature meets uncompromising comfort. From the historic grandeur of a coffee estate to the wild luxury of the Nicoya Peninsula and the modern design of Reserva Conchal, this is your private gateway to the wildest paradise on earth."
+        body: "Enter a world where primal nature meets uncompromising comfort. From the historic grandeur of a coffee estate to the wild luxury of the Nicoya Peninsula and the modern design of Reserva Conchal, this is your private gateway to the wildest paradise on earth.",
+        introImage: "/images/hero.png"
     },
     itineraryItems: [
         {
