@@ -2,7 +2,7 @@
 
 **"The Narendra Experience" Generator**
 
-This is not just a React template; it is a **Master Template & Workflow** designed for Agents (like Gemini, ChatGPT, Claude) to autonomously generate high-end luxury travel sites.
+This is not just a React template; it is a **Master Template & Workflow** designed for Agents (like Google Antigravity, GeminiCLI, CodexCLI, ClaudeCodeCLI) to autonomously generate high-end luxury travel sites.  Has been tested extensively with Google Antigravity.
 
 ## The Concept
 Code is no longer written by hand. This repository provides:
