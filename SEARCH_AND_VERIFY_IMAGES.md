@@ -8,12 +8,13 @@
 3.  A “download verification” report proving each asset is reachable and meets minimum quality constraints.
 
 ## Non-Negotiable Rules
--   **No hallucinations:** If you can’t verify a claim with an accessible source page and a downloadable file, do not include it.
+-   **Luxury First:** Prioritize visual impact and "Wow" factor. Official marketing photography is the preferred source for hotels, resorts, and Michelin-star dining.
+-   **No hallucinations:** Every asset must be verifiably captured (either via direct URL or browser screenshot/extraction).
+-   **Experience Over Provenance:** For personal/private brochures, prioritize the best official shot over licensing convenience. Label all copyrighted assets as "Official Marketing / Private Use Only".
 -   **Always provide BOTH:**
     -   (a) a human-viewable source page URL, and
-    -   (b) a direct-download file URL.
--   **Prefer permissive licensing:** (CC0 / CC BY / CC BY-SA). If you use copyrighted hotel/resort images, you must label them “Copyrighted / permission needed” and ALSO provide at least one permissive alternative.
--   **Avoid:** Watermarked images, AI-upscaled junk, tiny thumbnails, or “blocked hotlinking” assets unless you can still download them reliably.
+    -   (b) a direct-download file URL OR a browser-extracted original source.
+-   **Avoid:** Watermarked images, AI-upscaled junk, tiny thumbnails, or low-res placeholders.
 
 ---
 
@@ -26,21 +27,21 @@ For each placeholder, extract:
 -   **VIBE:** mood descriptors (moody, luxury, intimate, gold/black/indigo palette).
 -   **FORMAT:** desired orientation (landscape preferred for hero; otherwise flexible), min size.
 
-### Step 1: Build a search plan (Priority Order)
+### Step 1: Build a search plan (Luxury-First Priority)
 
-**TIER A (Best for safe reuse / licensing clarity)**
-1.  Wikimedia Commons (best: explicit license + direct file)
-2.  Official tourism boards / government sites with media kits (license varies; verify)
-3.  Museums / UNESCO / national park media pages (verify)
+**TIER 0 (Official Excellence - Required for Hotels/Resorts)**
+1.  Official Property Websites (Marriott, Hyatt, Four Seasons, etc.)
+2.  High-end travel journals (Condé Nast Traveler, Travel + Leisure, Tatler)
+3.  Official Press Kits / Media Centers
 
-**TIER B (High-quality but licensing varies)**
-4.  Flickr (filter for Creative Commons; verify license on page)
-5.  Unsplash / Pexels (generally permissive; still verify terms)
-6.  Photographer portfolios where licensing is explicit
+**TIER 1 (Heritage & Public Domain - Best for Monuments/Nature)**
+4.  Wikimedia Commons (verified high-res original files)
+5.  UNESCO Media Galleries
+6.  National Park / Government Tourism media kits
 
-**TIER C (Copyright likely; use only if needed)**
-7.  Official hotel/resort galleries / press kits (often copyrighted; label clearly)
-8.  OTA photos (Booking/Agoda/etc.) (often copyrighted; avoid unless allowed)
+**TIER 2 (High-Quality Social/Commercial)**
+7.  Flickr (High-res curated groups)
+8.  Unsplash / Pexels (Modern aesthetic fallback)
 
 ### Step 2: Search Strategy
 For each intent card, run 3–6 targeted searches:
@@ -78,10 +79,11 @@ For each candidate, record:
 -   Source page URL where license is stated
 -   Required attribution string
 
-### Step 5: Download Verification (Mandatory)
-**You must verify by downloading (not just viewing).**
-1.  **HEAD request:** Confirm HTTP 200, Content-Type image/*, Content-Length reasonable.
-2.  **Inspect:** Pixel dimensions, file size, format.
+### Step 5: Download & Capture Verification (Mandatory)
+**You must verify by viewing the original high-res source.**
+1.  **Direct Download:** If the official site allows, get the original high-res URL.
+2.  **Browser Subagent Capture:** Use the browser to find the high-res "hero" elements in the DOM. Extract the raw source URL (often hidden in `srcset` or data attributes).
+3.  **Halt Condition:** If the only available image is a low-res thumbnail (<1200px), halt and report as `LOW_QUALITY` to the user.
 
 ### Step 6: Quality Scoring
 Score 1–5 on: Match accuracy, Aesthetic (moody/luxury), Technical quality, Licensing safety.

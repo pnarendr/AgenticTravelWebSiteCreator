@@ -92,23 +92,21 @@ Before saving, verify:
 
 ---
 
-## Phase 4: Asset Workflow
-## Phase 4: Asset Workflow (Human-in-the-Loop Protocol)
-**Rule:** Truth > Convenience. Never use a competitor's photo for a specific property.
+## Phase 4: Asset Workflow (Luxury-First Protocol)
+**Rule:** Experience > Provenance (for Private/Internal use). Visual excellence is the primary directive.
 
-### Step 1: Agent-Led Discovery
-**Action:** Search Tier A sources (Wikimedia/Flickr) for **exact matches** only.
-*   **Success:** Download and verify.
-*   **Failure:** Do **NOT** substitute with a different hotel. Mark as `MISSING`.
+### Step 1: "Luxury-First" Discovery
+**Action:** Prioritize official marketing imagery and high-end travel journalism photography.
+1.  **Browser-Based Capture:** Navigate to official hotel/resort websites or premium travel portals (Marriott, Hyatt, Condé Nast, etc.).
+2.  **High-Fidelity Extraction:** Use browser tools to identify high-res original assets. If direct `curl` is blocked/lazy-loaded, use the browser subagent to capture or extract the source URL.
+3.  **Tier A Fallback:** Use Wikimedia/Flickr only if official shots are unavailable or of lower quality.
 
-### Step 2: The "Missing Asset" Request (CRITICAL)
-**If specific verified images are missing, you MUST ask the User:**
-> "I could not find a verifiable public-domain image for **[The Athenee Hotel]**.
-> To ensure accuracy, please find a photo you trust (e.g., from the official site or a review) and paste the URL or file here. I will integrate it."
+### Step 2: Truth > Convenience
+*   **NEVER** use a competitor's photo for a specific property.
+*   **STOP** and ask the User if an official "Wow" shot cannot be verifiably scraped.
 
-### Step 3: Integration or Fallback
-1.  **User Provides:** Download/Integrate the user's file.
-2.  **User Declines:** *Only then* ask permission to generate an **AI Concept** image (labeled as such) or use a **Generic Regional Vibe** shot (e.g., "Bangkok Skyline" instead of "Hotel Lobby").
+### Step 3: Human-in-the-Loop Verification
+Present the scraped gallery to the User for a "Vibe Check" before finalizing.
 
 ---
 
